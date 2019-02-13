@@ -36,8 +36,8 @@ async def on_message(message):
         await client.send_message(message.channel, A)
         await client.send_message(message.channel, B)
         
-    if message.content.startswith("wait"):
-        await client.send_file(message.channel, "D:\\discord\\wait.jpg")
+#    if message.content.startswith("wait"):
+#        await client.send_file(message.channel, "D:\\discord\\wait.jpg")
 
 #    if message.author.name=="SFN":
 #        await client.send_file(message.channel, "D:\\discord\\unknown.png")
