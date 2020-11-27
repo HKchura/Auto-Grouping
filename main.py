@@ -9,6 +9,8 @@ import requests
 import os
 
 client = discord.Client()
+intents = discord.Intents.default()
+intents.members = True 
 
 @client.event
 async def on_ready():
