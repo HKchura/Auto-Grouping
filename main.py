@@ -8,9 +8,9 @@ import asyncio
 import requests
 import os
 
-client = discord.Client()
 intents = discord.Intents.default()
 intents.members = True 
+client = discord.Client(intents=intents)
 
 @client.event
 async def on_ready():
@@ -23,7 +23,6 @@ async def on_ready():
 async def on_message(message):
     if message.content.startswith("!team"):
         name_list = list(message.author.voice.channel.members)
-        await message.channel.send(message.author.voice.channel.members)
         random.shuffle(name_list)
         A = []
         B = []
