@@ -33,8 +33,10 @@ async def on_message(message):
                 B.append(n[0])
         A = "A: " + ', '.join(A)
         B = "B: " + ', '.join(B)
-        await client.send_message(message.channel, A)
-        await client.send_message(message.channel, B)
+#        await client.send_message(message.channel, A)
+        await message.channel.send(A)
+#        await client.send_message(message.channel, B)
+        await message.channel.send(B)
         
 #    if message.content.startswith("wait"):
 #        await client.send_file(message.channel, "D:\\discord\\wait.jpg")
