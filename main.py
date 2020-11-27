@@ -20,7 +20,7 @@ async def on_ready():
 @client.event
 async def on_message(message):
     if message.content.startswith("!team"):
-        name_list = list(message.author.voice.channel.voice_members)
+        name_list = list(message.author.voice.channel.members)
         random.shuffle(name_list)
         A = []
         B = []
